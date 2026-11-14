@@ -213,6 +213,105 @@
     </div>
   </section>
 
+  <!-- ============ APP (PHONE MOCKUP) ============ -->
+  <section class="section section-app" id="app">
+    <div class="container app-grid">
+      <div class="app-copy reveal">
+        <p class="eyebrow">The VeloGuard App</p>
+        <h2 class="app-title">See every approach, <span class="accent">on your phone</span></h2>
+        <p class="app-lead">Mount your phone on the bars and the radar becomes a rear-view display. The app mirrors the live demo above — try the slider and watch the phone react.</p>
+        <ul class="app-points">
+          <li>
+            <strong>Live approach alerts</strong>
+            <span>Distance, closing speed, and time-to-reach for every vehicle behind you, updated in real time as traffic closes in.</span>
+          </li>
+          <li>
+            <strong>Tail light control</strong>
+            <span>Switch light modes, check battery, and tune alert volume and sensitivity thresholds — all from one screen.</span>
+          </li>
+          <li>
+            <strong>Ride history</strong>
+            <span>Every ride is logged with its close-pass moments, so you can review the stretches where the radar earned its keep.</span>
+          </li>
+          <li>
+            <strong>Head-unit friendly</strong>
+            <span>Prefer a bike computer? The same alerts mirror to major head units over ANT+ while the phone stays in your pocket.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="app-visual reveal">
+        <div class="phone">
+          <span class="phone-btn-side phone-btn-power" aria-hidden="true"></span>
+          <span class="phone-btn-side phone-btn-vol-a" aria-hidden="true"></span>
+          <span class="phone-btn-side phone-btn-vol-b" aria-hidden="true"></span>
+          <div class="phone-screen">
+            <span class="phone-camera" aria-hidden="true"></span>
+            <div class="phone-status">
+              <span>9:41</span>
+              <span class="phone-status-right">
+                <span class="phone-net">5G</span>
+                <svg width="25" height="12" viewBox="0 0 25 12" aria-hidden="true"><rect x="0.5" y="0.5" width="20" height="11" rx="3" fill="none" stroke="currentColor" opacity=".45"/><rect x="2.5" y="2.5" width="13" height="7" rx="1.5" fill="currentColor"/><path d="M23 4v4a2.2 2.2 0 0 0 0-4z" fill="currentColor" opacity=".45"/></svg>
+              </span>
+            </div>
+
+            <div class="phone-apphead">
+              <span class="phone-brand">
+                <svg class="phone-logo-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="3.2" fill="currentColor"/><path d="M16 8.5a7.5 7.5 0 0 1 7.5 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M16 3.5a12.5 12.5 0 0 1 12.5 12.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity=".55"/></svg>
+                <span>Velo<strong>Guard</strong></span>
+              </span>
+              <span class="phone-conn"><span class="dot dot-ok"></span>Connected</span>
+            </div>
+
+            <div class="app-alert" id="phoneAlert" data-state="clear">
+              <span class="app-alert-dot" aria-hidden="true"></span>
+              <div class="app-alert-text">
+                <p class="app-alert-title" id="phoneAlertTitle">All clear</p>
+                <p class="app-alert-meta" id="phoneAlertMeta">No vehicles behind you</p>
+              </div>
+            </div>
+
+            <div class="app-radar" aria-hidden="true">
+              <span class="app-radar-tag">Rear view</span>
+              <span class="app-radar-dist" id="phoneRadarDist">140 m</span>
+              <div class="app-radar-line"></div>
+              <div class="app-radar-cone"></div>
+              <div class="app-car" id="phoneCar">
+                <svg viewBox="0 0 60 96"><rect x="6" y="10" width="48" height="76" rx="12" fill="#8ea2c0"/><rect x="12" y="24" width="36" height="16" rx="5" fill="#22304a"/><rect x="12" y="58" width="36" height="12" rx="5" fill="#22304a"/><circle cx="15" cy="8" r="4" fill="#ffe9a8"/><circle cx="45" cy="8" r="4" fill="#ffe9a8"/><circle cx="15" cy="88" r="4" fill="#ff6b5e"/><circle cx="45" cy="88" r="4" fill="#ff6b5e"/></svg>
+              </div>
+              <div class="app-you"><span class="app-you-dot"></span>You</div>
+            </div>
+
+            <ul class="app-rows">
+              <li><span>Tail light mode</span><strong id="phoneLight">Steady · Eco</strong></li>
+              <li><span>Detection range</span><strong>140 m</strong></li>
+              <li><span>Battery</span><strong>78%</strong></li>
+            </ul>
+
+            <nav class="app-tabbar" aria-hidden="true">
+              <span class="app-tab active">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg>
+                Ride
+              </span>
+              <span class="app-tab">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                Alerts
+              </span>
+              <span class="app-tab">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                History
+              </span>
+              <span class="app-tab">
+                <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="19" cy="12" r="1.7"/></svg>
+                More
+              </span>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ SPECS ============ -->
   <section class="section" id="specs">
     <div class="container narrow">

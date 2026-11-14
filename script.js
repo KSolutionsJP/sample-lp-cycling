@@ -67,6 +67,14 @@
   var lightEl = document.getElementById("lightMode");
   var playBtn = document.getElementById("playBtn");
 
+  /* phone mockup (app section) — mirrors the demo state when present */
+  var phoneAlert = document.getElementById("phoneAlert");
+  var phoneTitle = document.getElementById("phoneAlertTitle");
+  var phoneMeta = document.getElementById("phoneAlertMeta");
+  var phoneLight = document.getElementById("phoneLight");
+  var phoneCar = document.getElementById("phoneCar");
+  var phoneRadarDist = document.getElementById("phoneRadarDist");
+
   var STATES = {
     clear: {
       name: "All clear",
@@ -118,6 +126,20 @@
       stateEl.textContent = STATES[s].name;
       descEl.textContent = STATES[s].desc;
       lightEl.textContent = STATES[s].light;
+      if (phoneAlert) {
+        phoneAlert.setAttribute("data-state", s);
+        if (phoneTitle) phoneTitle.textContent = STATES[s].name;
+        if (phoneLight) phoneLight.textContent = STATES[s].light;
+      }
+    }
+    if (phoneCar) {
+      phoneCar.style.top = (8 + (1 - d / 140) * 54) + "%";
+      if (phoneMeta) {
+        phoneMeta.textContent = s === "clear"
+          ? "No vehicles behind you"
+          : Math.round(d) + " m · closing at " + CLOSING_KMH + " km/h";
+      }
+      if (phoneRadarDist) phoneRadarDist.textContent = Math.round(d) + " m";
     }
     if (s === "clear") {
       speedEl.textContent = "— km/h";
